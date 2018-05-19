@@ -14,6 +14,7 @@ struct ForecastModel {
     let time: String
     let description: String
     let temp: String
+    let imageID: String
 }
 
 class WeatherOverviewViewController: UIViewController {
@@ -62,9 +63,7 @@ class WeatherOverviewViewController: UIViewController {
         viewModel.cellData
             .bind(to: forecastsTableView.rx.items) { tableView, row, element in
                 let cell = tableView.dequeueReusableCell(withIdentifier: "forecastCell") as! ForecastTableViewCell
-                cell.dateLabel.text = element.forecasts[row].time
-                cell.cityDegreesLabel.text = element.forecasts[row].temp
-                cell.weatherMessageLabel.text = element.forecasts[row].description
+                cell.configure(weatherData: element)
                 return cell
             }
             .disposed(by: disposeBag)

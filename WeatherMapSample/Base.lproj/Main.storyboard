@@ -35,7 +35,7 @@
                                                 <constraint firstAttribute="height" constant="21" id="EQn-lg-XeX"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HC9-Lr-sBm">
@@ -48,7 +48,7 @@
                                             <rect key="frame" x="16" y="61" width="343" height="30"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" keyboardType="URL"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCF-6a-VmU">
                                             <rect key="frame" x="66" y="168.5" width="309" height="90"/>
@@ -66,7 +66,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⋏" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huB-ti-gh2">
                                             <rect key="frame" x="180" y="289" width="15" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JlM-Jc-m6I">
@@ -110,27 +110,33 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldD-cx-zr7">
-                                                    <rect key="frame" x="163" y="21" width="138" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Weather message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldD-cx-zr7">
+                                                    <rect key="frame" x="169" y="21" width="190" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VQg-UX-OUT">
-                                                    <rect key="frame" x="57" y="6.5" width="50" height="50"/>
+                                                    <rect key="frame" x="63" y="6.5" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="eRU-ei-Dbm"/>
                                                         <constraint firstAttribute="height" constant="50" id="wvc-su-oui"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyf-oJ-lwg">
-                                                    <rect key="frame" x="15" y="21" width="34" height="21"/>
+                                                    <rect key="frame" x="15" y="21" width="40" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="mfQ-gF-fDQ"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="temp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBn-GZ-ZCl">
-                                                    <rect key="frame" x="115" y="21" width="40" height="21"/>
+                                                    <rect key="frame" x="121" y="21" width="40" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="rNo-Jv-gro"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -138,9 +144,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="KBn-GZ-ZCl" firstAttribute="centerY" secondItem="OmW-40-wIF" secondAttribute="centerY" id="5yZ-Eu-Imz"/>
-                                                <constraint firstAttribute="trailing" secondItem="ldD-cx-zr7" secondAttribute="trailing" constant="74" id="N9G-tu-6hM"/>
+                                                <constraint firstAttribute="trailing" secondItem="ldD-cx-zr7" secondAttribute="trailing" constant="16" id="N9G-tu-6hM"/>
                                                 <constraint firstItem="KBn-GZ-ZCl" firstAttribute="leading" secondItem="VQg-UX-OUT" secondAttribute="trailing" constant="8" id="Ngo-qg-x0G"/>
-                                                <constraint firstItem="ldD-cx-zr7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KBn-GZ-ZCl" secondAttribute="trailing" constant="8" symbolic="YES" id="Vho-tl-7Bt"/>
+                                                <constraint firstItem="ldD-cx-zr7" firstAttribute="leading" secondItem="KBn-GZ-ZCl" secondAttribute="trailing" constant="8" id="Vho-tl-7Bt"/>
                                                 <constraint firstItem="VQg-UX-OUT" firstAttribute="leading" secondItem="hyf-oJ-lwg" secondAttribute="trailing" constant="8" id="WVW-9r-xPm"/>
                                                 <constraint firstItem="ldD-cx-zr7" firstAttribute="centerY" secondItem="OmW-40-wIF" secondAttribute="centerY" id="caQ-bG-Cgv"/>
                                                 <constraint firstItem="VQg-UX-OUT" firstAttribute="centerY" secondItem="OmW-40-wIF" secondAttribute="centerY" id="lQv-0n-xqx"/>

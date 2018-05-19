@@ -38,7 +38,6 @@ final class WeatherViewModel {
                 guard !searchString.isEmpty else {
                     return Observable.empty()
                 }
-                print("searchString: \(searchString)")
                 return weatherService.search(withCity: searchString)
             })
         .share(replay: 1)
@@ -100,6 +99,7 @@ final class WeatherViewModel {
         return ForecastModel(
             time: forecast.date.formattedTime(formatter: formatter),
             description: forecast.description,
-            temp: "\(forecast.temp)ºC")
+            temp: "\(forecast.temp)ºC",
+            imageID: forecast.imageID)
     }
 }
