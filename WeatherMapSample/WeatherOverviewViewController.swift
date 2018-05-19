@@ -33,10 +33,10 @@ class WeatherOverviewViewController: UIViewController {
     private func addBindsToViewModel(viewModel: WeatherViewModel) {
         
         cityTextField.rx.text
-            .map{ String(describing: $0) }
+            .map{ String($0 ?? "") }
             .bind(to: viewModel.searchText)
             .disposed(by: disposeBag)
-        
+
         viewModel.cityName
             .bind(to: cityNameLabel.rx.text)
             .disposed(by: disposeBag)

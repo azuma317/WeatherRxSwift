@@ -25,8 +25,7 @@ final class WeatherViewModel {
     var cellData: Observable<[(day: String, forecasts: [ForecastModel])]> {
         return weather.map(self.cells)
     }
-//    var searchText = Variable<String>("")
-//    var searchText = BehaviorSubject<String>(value: "Japan")
+    
     var searchText = BehaviorRelay<String>(value: "")
     
     init(weatherService: WeatherAPIService) {

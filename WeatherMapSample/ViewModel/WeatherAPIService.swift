@@ -43,7 +43,7 @@ class WeatherAPIService {
             "APPID": Constants.APPID
         ]
         
-        return request(.get, ResourcePath.Forecast.path, parameters: params)
+        return request(.get, ResourcePath.Forecast.path, parameters: params, encoding: URLEncoding.default)
             .json()
             .map(JSON.init)
             .flatMap { json -> Observable<Weather> in
