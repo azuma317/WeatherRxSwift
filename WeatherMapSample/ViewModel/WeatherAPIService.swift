@@ -45,6 +45,9 @@ class WeatherAPIService {
         
         return request(.get, ResourcePath.Forecast.path, parameters: params, encoding: URLEncoding.default)
             .json()
+            .catchError({ (error) -> Observable<Any> in
+                return Observable.empty()
+            })
             .map(JSON.init)
             .flatMap { json -> Observable<Weather> in
                 guard let weather: Weather = Weather(json: json) else {

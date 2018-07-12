@@ -40,7 +40,7 @@ final class WeatherViewModel {
                 }
                 return weatherService.search(withCity: searchString)
             })
-        .share(replay: 1)
+            .share(replay: 1)
         
         cityName = weather
             .map { $0.cityName }

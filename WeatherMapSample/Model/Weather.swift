@@ -32,7 +32,7 @@ class Forecast {
     }
 }
 
-struct Weather {
+class Weather {
     
     let cityName: String
     let forecasts: [Forecast]
